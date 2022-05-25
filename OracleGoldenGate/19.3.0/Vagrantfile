@@ -36,7 +36,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   VM_NAME = default_s('VM_NAME', 'oracle-goldengate-1910-vagrant')
 
   # Memory for the VM (in MB, 2300 MB is ~2.25 GB)
-  VM_MEMORY = default_i('VM_MEMORY', 2300)
+  #VM_MEMORY = default_i('VM_MEMORY', 2300)
+  VM_MEMORY = default_i('VM_MEMORY', 4096)
 
   # VM time zone
   # If not specified, will be set to match host time zone (if possible)
@@ -49,10 +50,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   VM_ORACLE_HOME = default_s('VM_ORACLE_HOME', '/opt/oracle/product/19c/dbhome_1')
 
   # Oracle SID
-  VM_ORACLE_SID = default_s('VM_ORACLE_SID', 'ORCLCDB')
+  VM_ORACLE_SID = default_s('VM_ORACLE_SID', 'CDB')
 
   # PDB name
-  VM_ORACLE_PDB = default_s('VM_ORACLE_PDB', 'ORCLPDB1')
+  VM_ORACLE_PDB = default_s('VM_ORACLE_PDB', 'PDB1')
 
   # Database character set
   VM_ORACLE_CHARACTERSET = default_s('VM_ORACLE_CHARACTERSET', 'AL32UTF8')
